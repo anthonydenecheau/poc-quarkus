@@ -6,5 +6,12 @@ mvn quarkus:add-extensions -Dextensions="quarkus-jdbc-h2,quarkus-hibernate-orm-p
 run
 mvn compile quarkus:dev
 
+echo "# poc-quarkus" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/anthonydenecheau/poc-quarkus.git
+git push -u origin master
+
 application
 https://github.com/quarkusio/quarkus-quickstarts/tree/master/hibernate-orm-panache-resteasy
