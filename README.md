@@ -12,12 +12,13 @@
 * metrics
 
 ## 
-* url
-    http://localhost:8080
-    http://localhost:8080/swagger-ui
-    http://localhost:8080/health
+- url
+```bash
+http://localhost:8080
+http://localhost:8080/swagger-ui
+http://localhost:8080/health
+```
 
-* commande
 - run
 ```bash
 mvn compile quarkus:dev
