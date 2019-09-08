@@ -30,9 +30,6 @@ mvn test
 - quarkus
 ```bash
 mvn quarkus:list-extensions 
-```
-
-```bash
 mvn quarkus:add-extension -Dextensions="quarkus-jdbc-h2,quarkus-hibernate-orm-panache, quarkus-hibernate-validator,quarkus-resteasy-jsonb,quarkus-swagger-ui,quarkus-smallrye-health"
 ```
 
