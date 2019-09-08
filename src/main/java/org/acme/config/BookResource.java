@@ -45,11 +45,11 @@ public class BookResource {
     }
 
     @DELETE
-    @Path("{id}")
+    @Path("/{id}")
     @Transactional
     public Response delete(@PathParam("id") long id) {
         Book entity = Book.findById(id);
         entity.delete();
-        return Response.status(204).build();
+        return Response.status(Response.Status.OK).build();
     }
 }

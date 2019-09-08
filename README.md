@@ -1,17 +1,47 @@
-create
-mvn io.quarkus:quarkus-maven-plugin:0.21.2:create -DprojectGroupId=org.acme -DprojectArtifactId=application-configuration -DclassName="org.acme.config.GreetingResource" -Dpath="/greeting"
+# POC Quarkus
 
-mvn quarkus:add-extensions -Dextensions="quarkus-jdbc-h2,quarkus-hibernate-orm-panache,quarkus-hibernate-validator,quarkus-resteasy-jsonb"
+## Features
+* application CRUD (resteasy,hibernate validator, panache)
+* Bdd : h2
+* documentation
+* health (readiness)
 
-run
+## TODO
+* logging
+* tracing
+* metrics
+
+## 
+* url
+    http://localhost:8080
+    http://localhost:8080/swagger-ui
+    http://localhost:8080/health
+
+* commande
+- run
+```bash
 mvn compile quarkus:dev
+```
+- test
+```bash
+mvn test
+```
+- quarkus
+```bash
+mvn quarkus:list-extensions 
+```
 
-echo "# poc-quarkus" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/anthonydenecheau/poc-quarkus.git
-git push -u origin master
+```bash
+mvn quarkus:add-extension -Dextensions="quarkus-jdbc-h2,quarkus-hibernate-orm-panache, quarkus-hibernate-validator,quarkus-resteasy-jsonb,quarkus-swagger-ui,quarkus-smallrye-health"
+```
 
-application
+## References
+
+* Tracing, heath, etc.
+https://lordofthejars.github.io/quarkus-cheat-sheet/
+ * application
 https://github.com/quarkusio/quarkus-quickstarts/tree/master/hibernate-orm-panache-resteasy
+* présentation
+https://www.youtube.com/watch?v=JhAYfP99agc
+* notes
+bug swagger : https://github.com/quarkusio/quarkus/issues/3852
