@@ -35,6 +35,8 @@ mvn quarkus:add-extension -Dextensions="quarkus-jdbc-h2,quarkus-hibernate-orm-pa
 
 ## References
 
+* Hibernate
+https://quarkus.io/guides/hibernate-search-guide
 * Tracing, heath, etc.
 https://lordofthejars.github.io/quarkus-cheat-sheet/
  * application
